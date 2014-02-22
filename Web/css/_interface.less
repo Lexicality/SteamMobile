@@ -1,10 +1,8 @@
 
-.container {
+.rcontainer {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	
-	background-color: @rohpod-background;
 }
 
 .fixed-bar {
@@ -23,11 +21,11 @@
 		}
 	}
 
-	.btn,
-	input,
-	textarea {
+	#username,
+	#password,
+	#message-box {
 		display: block;
-		height: 16px;
+		// height: 16px;
 		padding: 6px;
 		font-size: 10pt;
 		outline: none;
@@ -37,26 +35,6 @@
 		&:last-child {
 			margin-right: 0;
 		}
-	}
-	
-	.btn {
-		flex: 0 0 auto;
-
-		box-sizing: content-box;
-		text-align: center;
-		background-color: @rohpod-buttons;
-		color: white;
-		font-weight: bold;
-		text-decoration: none;
-		cursor: pointer;
-
-		&:hover {
-			background-color: lighten(@rohpod-buttons, 10);
-		}
-	}
-	
-	input,
-	textarea {
 		flex: 1 0 auto;
 
 		color: lighten(black, 1);
@@ -67,6 +45,24 @@
 			color: lighten(black, 20);
 			background-color: darken(white, 2);
 		}
+	}
+	
+	.btn {
+		flex: 0 0 auto;
+		margin: 0px;
+		margin-right: 6px;
+
+		// box-sizing: content-box;
+		// text-align: center;
+		// background-color: @rohpod-buttons;
+		// color: white;
+		// font-weight: bold;
+		// text-decoration: none;
+		// cursor: pointer;
+
+		// &:hover {
+		// 	background-color: lighten(@rohpod-buttons, 10);
+		// }
 	}
 }
 
@@ -99,7 +95,7 @@
 }
 
 @media all and (max-width: 600px) {
-	div.container > #header {
+	div.rcontainer > #header {
 		h1 { display: none; }
 	}
 }
